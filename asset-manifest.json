@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/star-wars-planet-search/static/css/main.f129408b.chunk.css",
-    "main.js": "/star-wars-planet-search/static/js/main.a0ca8ace.chunk.js",
-    "main.js.map": "/star-wars-planet-search/static/js/main.a0ca8ace.chunk.js.map",
-    "runtime-main.js": "/star-wars-planet-search/static/js/runtime-main.cc44cc02.js",
-    "runtime-main.js.map": "/star-wars-planet-search/static/js/runtime-main.cc44cc02.js.map",
-    "static/js/2.1987d80d.chunk.js": "/star-wars-planet-search/static/js/2.1987d80d.chunk.js",
-    "static/js/2.1987d80d.chunk.js.map": "/star-wars-planet-search/static/js/2.1987d80d.chunk.js.map",
-    "index.html": "/star-wars-planet-search/index.html",
-    "precache-manifest.ba6d8d5534fdbbdc3b0740851bae3455.js": "/star-wars-planet-search/precache-manifest.ba6d8d5534fdbbdc3b0740851bae3455.js",
-    "service-worker.js": "/star-wars-planet-search/service-worker.js",
-    "static/css/main.f129408b.chunk.css.map": "/star-wars-planet-search/static/css/main.f129408b.chunk.css.map",
-    "static/js/2.1987d80d.chunk.js.LICENSE.txt": "/star-wars-planet-search/static/js/2.1987d80d.chunk.js.LICENSE.txt",
-    "static/media/loading.gif": "/star-wars-planet-search/static/media/loading.41ffd790.gif"
+    "main.css": "/static/css/main.f129408b.chunk.css",
+    "main.js": "/static/js/main.a0ca8ace.chunk.js",
+    "main.js.map": "/static/js/main.a0ca8ace.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5529cfef.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5529cfef.js.map",
+    "static/js/2.1987d80d.chunk.js": "/static/js/2.1987d80d.chunk.js",
+    "static/js/2.1987d80d.chunk.js.map": "/static/js/2.1987d80d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.def33366cc9c9dd3bd35f6a2bb1f68a3.js": "/precache-manifest.def33366cc9c9dd3bd35f6a2bb1f68a3.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.f129408b.chunk.css.map": "/static/css/main.f129408b.chunk.css.map",
+    "static/js/2.1987d80d.chunk.js.LICENSE.txt": "/static/js/2.1987d80d.chunk.js.LICENSE.txt",
+    "static/media/loading.gif": "/static/media/loading.41ffd790.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.cc44cc02.js",
+    "static/js/runtime-main.5529cfef.js",
     "static/js/2.1987d80d.chunk.js",
     "static/css/main.f129408b.chunk.css",
     "static/js/main.a0ca8ace.chunk.js"
