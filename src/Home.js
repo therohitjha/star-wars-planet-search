@@ -21,11 +21,12 @@ export default function Home() {
       }
     };
     getPlanet();
-    const timer=setInterval(() => {
+
+    const timer = setInterval(() => {
       setCount(0);
     }, 60000);
 
-    return ()=>clearInterval(timer)
+    return () => clearInterval(timer);
   }, []);
 
   const handleSearch = async (event) => {
@@ -35,10 +36,14 @@ export default function Home() {
     if (user.name === "Luke Skywalker" && count <= 15) {
       setCount(count + 1);
       if (value) {
-        const filterPlanet = await planet.filter((_) =>
-          _.name.toLowerCase().includes(value)
-        );
-        setDisplayPlanet(filterPlanet);
+        try {
+          const filterPlanet = await planet.filter((_) =>
+            _.name.toLowerCase().includes(value)
+          );
+          setDisplayPlanet(filterPlanet);
+        } catch (err) {
+          console.log(err);
+        }
       } else {
         setDisplayPlanet("");
       }

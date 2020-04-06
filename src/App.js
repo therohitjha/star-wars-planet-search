@@ -12,23 +12,21 @@ export default function App() {
     err: "",
   });
 
-
   const handleForm = (e) => {
     e.preventDefault();
-   if (user.name !== "Luke Skywalker") {
+    if (user.name !== "Luke Skywalker" || user.pass !== "19BBY") {
       setUser((prevData) => {
         return { ...prevData, err: "Wrong Username & Password" };
       });
-    } else if(user.name === "Luke Skywalker" && user.pass==='19BBY') {
+    } else if (user.name === "Luke Skywalker" && user.pass === "19BBY") {
       setUser((prevData) => {
         return { ...prevData, isLogged: true };
       });
-     
     }
   };
 
   return (
-    <HashRouter basename='/'>
+    <HashRouter basename="/">
       <LoginContext.Provider value={{ user, handleForm, setUser }}>
         <Switch>
           <Route exact path="/" component={Home} />

@@ -9,7 +9,7 @@ export default function Login() {
         <Redirect to="/" />
       ) : (
         <form onSubmit={(e) => handleForm(e)} className="form">
-          {user.err && <h2 style={{ color: "red" }}>{user.err}</h2>}
+          {user.err && <h4 style={{ color: "red" }}>{user.err}</h4>}
           <input
             type="text"
             defaultValue={user.name}
@@ -17,14 +17,14 @@ export default function Login() {
             onChange={(e) => setUser({ ...user, name: e.target.value })}
             required
           />
-          <input type="text" defaultValue={user.pass} className="input-box" />
           <input
-            type="submit"
-            value="Log In"
-            className="btn"
+            type="text"
+            defaultValue={user.pass}
+            className="input-box"
             onChange={(e) => setUser({ ...user, pass: e.target.value })}
             required
           />
+          <input type="submit" value="Log In" className="btn" />
         </form>
       )}
     </>
