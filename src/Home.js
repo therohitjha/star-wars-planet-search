@@ -7,6 +7,7 @@ export default function Home() {
   const [planet, setPlanet] = useState();
   const [searchPlanet, setSearchPlanet] = useState("");
   const [displayPlanet, setDisplayPlanet] = useState();
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     const getPlanet = async () => {
@@ -20,27 +21,36 @@ export default function Home() {
       }
     };
     getPlanet();
+    setInterval(() => {
+      setCount(0);
+    }, 60000);
   }, []);
 
-  const handleSearch = async event => {
+  const handleSearch = async (event) => {
     const { value } = event.target;
     setSearchPlanet(value);
-    if(value){
-         const filterPlanet = await planet.filter(_ =>
-      _.name.toLowerCase().includes(value)
-    );
-    setDisplayPlanet(filterPlanet);
-    }else{
-      setDisplayPlanet('')
+
+    if (user.name === "Luke Skywalker" && count <= 15) {
+      setCount(count + 1);
+      if (value) {
+        const filterPlanet = await planet.filter((_) =>
+          _.name.toLowerCase().includes(value)
+        );
+        setDisplayPlanet(filterPlanet);
+      } else {
+        setDisplayPlanet("");
+      }
+    } else {
+      setDisplayPlanet("");
+      alert(`Search Limit Exceeded, Please Wait...`);
     }
- 
   };
 
   return (
     <>
       {user.isLogged ? (
         <SearchPlanet
-        displayPlanet={displayPlanet}
+          displayPlanet={displayPlanet}
           searchPlanet={searchPlanet}
           handleSearch={handleSearch}
         />

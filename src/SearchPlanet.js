@@ -3,6 +3,7 @@ import React from "react";
 function SearchPlanet({ displayPlanet, searchPlanet, handleSearch }) {
   return (
     <>
+  
       <input
         type="text"
         placeholder="Search..."

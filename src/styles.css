@@ -23,6 +23,7 @@ body {
   border-radius: 20px;
   border: 1px solid black;
   outline: none;
+  width: 300px;
 }
 
 .btn {
@@ -34,6 +35,8 @@ body {
   outline: none;
   border-radius: 20px;
   cursor: pointer;
+  width: 320px;
+
 }
 
 .btn:hover {
@@ -44,4 +47,15 @@ body {
 
 .mb{
   margin-bottom: 1rem;
+}
+
+h4,h1{
+  padding: .4rem;
+  background: #eee;
+  color: black;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin: .4rem;
+  transition: all .4s ease-in-out;
 }
