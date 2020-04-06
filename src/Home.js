@@ -21,9 +21,11 @@ export default function Home() {
       }
     };
     getPlanet();
-    setInterval(() => {
+    const timer=setInterval(() => {
       setCount(0);
     }, 60000);
+
+    return ()=>clearInterval(timer)
   }, []);
 
   const handleSearch = async (event) => {
