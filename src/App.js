@@ -14,15 +14,23 @@ export default function App() {
 
   const handleForm = (e) => {
     e.preventDefault();
-    if (user.name !== "Luke Skywalker" || user.pass !== "19BBY") {
+    if(user.name && user.pass){
+      if (user.name !== "Luke Skywalker" || user.pass !== "19BBY") {
+        setUser((prevData) => {
+          return { ...prevData, err: "Wrong Username & Password" };
+        });
+      } 
+      else if (user.name === "Luke Skywalker" && user.pass === "19BBY") {
+        setUser((prevData) => {
+          return { ...prevData, isLogged: true };
+        });
+      }
+    }else{
       setUser((prevData) => {
-        return { ...prevData, err: "Wrong Username & Password" };
-      });
-    } else if (user.name === "Luke Skywalker" && user.pass === "19BBY") {
-      setUser((prevData) => {
-        return { ...prevData, isLogged: true };
-      });
+        return { ...prevData, err: "Enter Username & Password" };
+      })
     }
+
   };
 
   return (

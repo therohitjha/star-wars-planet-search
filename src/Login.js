@@ -15,14 +15,14 @@ export default function Login() {
             defaultValue={user.name}
             className="input-box"
             onChange={(e) => setUser({ ...user, name: e.target.value })}
-            required
+          
           />
           <input
             type="text"
             defaultValue={user.pass}
             className="input-box"
             onChange={(e) => setUser({ ...user, pass: e.target.value })}
-            required
+           
           />
           <input type="submit" value="Log In" className="btn" />
         </form>

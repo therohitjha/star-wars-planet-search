@@ -9,12 +9,12 @@ export default function Home() {
   const [displayPlanet, setDisplayPlanet] = useState();
   const [count, setCount] = useState(0);
 
-
-
   useEffect(() => {
     const getPlanet = async () => {
       try {
-        const fetchPlanet = await fetch("https://swapi.co/api/planets",{mode: 'no-cors'});
+        const fetchPlanet = await fetch("https://swapi.co/api/planets", {
+          mode: "no-cors",
+        });
         const response = await fetchPlanet.json();
         const data = await response.results;
         setPlanet(data);
@@ -27,8 +27,6 @@ export default function Home() {
     const timer = setInterval(() => {
       setCount(0);
     }, 60000);
-
-    
 
     return () => clearInterval(timer);
   }, []);

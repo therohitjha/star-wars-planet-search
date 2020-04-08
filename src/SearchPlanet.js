@@ -20,6 +20,7 @@ function SearchPlanet({ displayPlanet, searchPlanet, handleSearch}) {
             <h1 key={_.name}>{_.name}</h1>
           )
         )}
+
     </>
   );
 }
