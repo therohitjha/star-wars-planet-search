@@ -1,13 +1,12 @@
 import React from "react";
 
 function SearchPlanet({ displayPlanet, searchPlanet, handleSearch}) {
-  console.log(displayPlanet);
 
   return (
     <>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Search The Planet..."
         value={searchPlanet}
         onChange={(e) => handleSearch(e)}
         className="input-box mb"
